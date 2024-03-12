@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp
+﻿namespace ConsoleApp.Models
 {
     using System;
     using System.Collections.Generic;
@@ -13,8 +13,8 @@
         {
             ImportedObjectsBuilder importedObjectBuilder = new ImportedObjectsBuilder("data.csv");
             var importedObjects = importedObjectBuilder.Build();
-            DataPrinter.printImportedObjects(importedObjects);
-            Console.ReadLine();
+            DataPrinter.PrintImportedObjects(importedObjects);
+            Console.ReadKey();
         }
     }
 }

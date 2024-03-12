@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp
+namespace ConsoleApp.Models
 {
-    public class DataPrinter
+    public static class DataPrinter
     {
-        public static void printImportedObjects(ImportedObjects importedObjects) 
+        public static void PrintImportedObjects(ImportedObjects importedObjects) 
         {
             foreach (var database in importedObjects.databases)
             {
                 Console.WriteLine($"Database: {database.Key} ({database.Value.tables.Count} tables)");
+                Console.WriteLine();
 
                 foreach (var table in database.Value.tables)
                 {
@@ -22,8 +23,10 @@ namespace ConsoleApp
                     {
                         Console.WriteLine($"\t\tColumn: {column.Name} - DataType: {column.DataType}, IsNullable: {column.IsNullabe}");
                     }
+                    Console.WriteLine();
                 }
-            } 
+                Console.WriteLine("---------------------------------------------------------------------------");
+            }
         }
     }
 }

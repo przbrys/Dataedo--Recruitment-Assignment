@@ -43,10 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\Constants .cs" />
     <Compile Include="DataPrinter.cs" />
     <Compile Include="DataProcessor.cs" />
     <Compile Include="CsvReader.cs" />
-    <Compile Include="ImportedObjects.cs" />
+    <Compile Include="Models\Column.cs" />
+    <Compile Include="Models\Database.cs" />
+    <Compile Include="Models\ImportedObjects.cs" />
+    <Compile Include="Models\ImportedObjectsBuilder.cs" />
+    <Compile Include="Models\Table.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

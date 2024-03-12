@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    public class CsvReader
+    public static class CsvReader
     {
         public static List<string> ReadFile(string filePath)
         {
@@ -16,7 +16,7 @@ namespace ConsoleApp
             while (!streamReader.EndOfStream)
             {
                 var line = streamReader.ReadLine();
-                if (line != "")
+                if (!string.IsNullOrEmpty(line))
                 {
                     importedLines.Add(line);
                 }
